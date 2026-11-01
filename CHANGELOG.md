@@ -1,4 +1,7 @@
-# Changelog — SquareScreen Firmware
+# Changelog
+
+## [2.1.0] - 2026-11-01
+- Built from commit 4f9d222
 
 ## [2.1.0] - 2026-11-01
 

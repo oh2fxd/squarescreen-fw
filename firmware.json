@@ -1,5 +1,5 @@
 {
   "version": "2.1.0",
   "url": "https://raw.githubusercontent.com/oh2fxd/squarescreen-firmware/main/squarescreen.bin",
-  "notes": "SquareScreen v2.1.0 initial release for Guition ESP32-4848S040 with Shelly 3EM, Spot Electricity 12H chart, Kissala Animation, and Web Config"
+  "notes": "Release v2.1.0"
 }
