@@ -30,5 +30,5 @@ esptool.py --chip esp32s3 -p /dev/ttyACM0 write_flash 0x10000 squarescreen.bin
 ## Auto-Update Feed
 The firmware update feed is hosted at:
 ```
-https://raw.githubusercontent.com/oh2fxd/squarescreen-firmware/main/firmware.json
+https://raw.githubusercontent.com/oh2fxd/squarescreen-fw/main/firmware.json
 ```
