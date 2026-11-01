@@ -6,8 +6,9 @@ Official precompiled binaries for the **Guition ESP32-4848S040** (ESP32-S3 4.0" 
 
 ## Latest Binary
 
-* **Current Release**: `v2.1.0`
-* **Direct Download**: [squarescreen.bin](squarescreen.bin)
+* **Current Release**: `v2.1.1`
+* **Direct OTA Download**: [squarescreen.bin](squarescreen.bin)
+* **Merged Factory Flash (Offset 0x0)**: [squarescreen.merged.bin](squarescreen.merged.bin)
 
 ---
 
@@ -19,11 +20,21 @@ If your SquareScreen is already connected to your local network:
 2. Select `squarescreen.bin`.
 3. Click **Upload & Flash**. The device will update and reboot automatically.
 
-### Method 2: PlatformIO / esptool (USB-C)
-Connect the device to your computer via USB-C:
+### Method 2: Initial Factory Flash via USB-C (esptool)
+Connect the device to your computer via USB-C and flash the single merged binary at offset `0x0`:
 ```bash
-esptool.py --chip esp32s3 -p /dev/ttyACM0 write_flash 0x10000 squarescreen.bin
+esptool --chip esp32s3 write_flash 0x0 squarescreen.merged.bin
 ```
+
+---
+
+## First-Time Wi-Fi Setup
+SquareScreen comes with **no hardcoded credentials**:
+1. On initial boot, SquareScreen starts an open Setup Hotspot: `SquareScreen-Setup`
+2. Connect to the Wi-Fi network `SquareScreen-Setup` on your phone or PC.
+3. Open `http://192.168.4.1/config` in your browser.
+4. Enter your local Wi-Fi SSID and password, then click **Save & Reboot**.
+5. The device connects to your Wi-Fi and saves the configuration permanently in NVS!
 
 ---
 
@@ -32,3 +43,9 @@ The firmware update feed is hosted at:
 ```
 https://raw.githubusercontent.com/oh2fxd/squarescreen-fw/main/firmware.json
 ```
+
+---
+
+## License
+
+This project is licensed under the [MIT License](LICENSE) — Copyright (c) 2026 oh2fxd.
